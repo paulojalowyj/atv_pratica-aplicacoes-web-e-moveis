@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Porfolio</title>
+  </head>
+  <body>
+    
+    <div id="github"></div>
+
+    <script>
+      // Fazendo uma requisição GET para a API
+      fetch("https://api.github.com/users/paulojalowyj/repos")
+        .then((response) => response.json()) // Parse da resposta como JSON
+        .then((data) => {
+          // Manipulação dos dados recebidos da API
+          const dataContainer = document.getElementById("github");
+          data.map((item) => {
+            console.log(item);
+            // Criar elementos com base nos dados da API
+            const language = document.createElement("p");
+            language.textContent = item.language;
+            dataContainer.appendChild(language);
+          });
+        })
+        .catch((error) =>
+          console.error("Ocorreu um erro ao buscar os dados da API:", error)
+        );
+    </script>
+  </body>
+</html>

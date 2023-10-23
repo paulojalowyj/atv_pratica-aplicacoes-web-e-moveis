@@ -1,11 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Paulo Gustavo Moreira Jalowyj - RU: 4232191</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="logo">Paulo Jalowyj</h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#portfolio">Portolio</a></li>
+          </ul>
+        </nav>
+        <div style="width: 100%; display: flex; justify-content: end">
+          <button class="contato" onclick="goToAnchor('contato')">
+            Contato
+          </button>
+        </div>
+      </header>
+    </div>
+    <main>
+      <div class="container">
+        <section id="sobre">
+          <div class="section-title-container">
+            <h2>Sobre Mim</h2>
+          </div>
+          <div class="content">
+            <p>
+              Sou um profissional com experiência em liderança e inovação,
+              atuando como CTO na Siderea Academy e Coordenador de Inovação na
+              Escola da Magistratura Federal. Atualmente, estou em processo de
+              aprimoramento acadêmico e ampliação de conhecimentos ao cursar
+              Engenharia de Software na UNINTER.
+            </p>
+
+            <p>
+              Destaco minha habilidade em conciliar conhecimentos técnicos e
+              criatividade, o que me permite abordar desafios complexos de forma
+              inovadora. Minha trajetória profissional é pautada pela busca
+              contínua de excelência, contribuindo para o desenvolvimento de
+              soluções eficientes e impactantes. Além disso, tenho experiência
+              em liderar equipes e projetos de alto desempenho, focados no
+              crescimento e sucesso das organizações.
+            </p>
+
+            <p>
+              Sou movido por desafios e pela oportunidade de aprender
+              constantemente. Minha visão abrangente e comprometimento com a
+              excelência me permitem impulsionar projetos inovadores, alinhados
+              com as necessidades do mercado e com o avanço tecnológico.
+            </p>
+          </div>
+        </section>
+
+        <section id="formacao">
+          <div class="section-title-container">
+            <h2>Formação</h2>
+            <p>Formação ...</p>
+          </div>
+          <div id=""></div>
+        </section>
+
+        <section id="portfolio">
+          <div class="section-title-container">
+            <h2>Portolio</h2>
+            <p>Últimos projetos desenvolvidos.</p>
+          </div>
+          <div id="github"></div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">Footer</div>
+      <div></div>
+    </footer>
+
+    <script>
+      // Fazendo uma requisição GET para a API de repositório no GitHub
+      fetch("https://api.github.com/users/paulojalowyj/repos?per_page=5")
+        .then((response) => response.json()) // Parse da resposta como JSON
+        .then((data) => {
+          // Manipulação dos dados recebidos da API
+          const dataContainer = document.getElementById("github");
+          data.map((item) => {
+            // Criar elementos com base nos dados da API
+            const card = document.createElement("div");
+            const id = document.createElement("p");
+            const language = document.createElement("p");
+
+            card.className = "repository-card";
+
+            id.textContent = item.id;
+            language.textContent = item.language;
+
+            dataContainer.appendChild(card);
+            card.appendChild(id);
+            card.appendChild(language);
+          });
+        })
+        .catch((error) =>
+          console.error("Ocorreu um erro ao buscar os dados da API:", error)
+        );
+
+      //Função de navegação para o botão de contato
+      function goToAnchor(anchor) {
+        var loc = document.location.toString().split("#")[0];
+        document.location = loc + "#" + anchor;
+        return false;
+      }
+    </script>
+  </body>
 </html>
