@@ -41,7 +41,7 @@ nav ul {
 }
 
 .nav a {
-  color: var(--lime-300);
+  color: var(--lime-400);
 }
 
 .container {
@@ -55,6 +55,15 @@ header {
   grid-template-columns: 2fr 3fr 2fr;
   align-items: center;
   gap: 24px;
+  padding: 12px 20px 12px 20px;
+  max-width: 1440px;
+  margin: auto;
+}
+
+footer {
+  padding: 60px 20px 12px 20px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .footer-content {
@@ -62,6 +71,12 @@ header {
   padding: 32px 20px;
   border-radius: 8px;
   border: solid 1px var(--zinc-800);
+}
+
+.footer-copyright {
+  display: flex;
+  padding: 24px 0;
+  justify-content: space-between;
 }
 
 .logo {
@@ -81,10 +96,20 @@ button {
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
+  transition: all;
+  transition-duration: 250ms;
+}
+
+button:hover {
+  opacity: 90%;
+  border: solid 1px var(--lime-500)
 }
 
 section {
   margin: 40px 0;
+  padding: 12px 20px 12px 20px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 h2 {
@@ -99,6 +124,35 @@ h2 {
   padding: 20px;
   border-radius: 8px;
   border: solid 1px var(--zinc-800);
+  display: flex;
+  flex-direction: column;
+}
+
+.repository-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.repository-card-header h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.repository-card-header p {
+  color: var(--lime-400);
+}
+
+.respository-description {
+  font-size: small;
+  line-height: 1.25rem;
+  margin-bottom: 20px;
+  color: var(--zinc-400);
+}
+
+.repository-link {
+  color: var(--lime-400);
+  margin-top: 12px;
 }
 
 #github {
@@ -126,12 +180,6 @@ h2 {
 
   button {
     max-width: 100%;
-  }
-
-  footer {
-    padding: 12px 20px 12px 20px;
-    max-width: 1440px;
-    margin: auto;
   }
 }
 

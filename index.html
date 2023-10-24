@@ -8,100 +8,136 @@
     <title>Paulo Gustavo Moreira Jalowyj - RU: 4232191</title>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1 class="logo">Paulo Jalowyj</h1>
-        <nav class="nav">
-          <ul>
-            <li><a href="#sobre">Sobre Mim</a></li>
-            <li><a href="#formacao">Formação</a></li>
-            <li><a href="#portfolio">Portolio</a></li>
-          </ul>
-        </nav>
-        <div style="width: 100%; display: flex; justify-content: end">
-          <button class="contato" onclick="goToAnchor('contato')">
-            Contato
-          </button>
-        </div>
-      </header>
-    </div>
-    <main>
-      <div class="container">
-        <section id="sobre">
-          <div class="section-title-container">
-            <h2>Sobre Mim</h2>
-          </div>
-          <div class="content">
-            <p>
-              Sou um profissional com experiência em liderança e inovação,
-              atuando como CTO na Siderea Academy e Coordenador de Inovação na
-              Escola da Magistratura Federal. Atualmente, estou em processo de
-              aprimoramento acadêmico e ampliação de conhecimentos ao cursar
-              Engenharia de Software na UNINTER.
-            </p>
-
-            <p>
-              Destaco minha habilidade em conciliar conhecimentos técnicos e
-              criatividade, o que me permite abordar desafios complexos de forma
-              inovadora. Minha trajetória profissional é pautada pela busca
-              contínua de excelência, contribuindo para o desenvolvimento de
-              soluções eficientes e impactantes. Além disso, tenho experiência
-              em liderar equipes e projetos de alto desempenho, focados no
-              crescimento e sucesso das organizações.
-            </p>
-
-            <p>
-              Sou movido por desafios e pela oportunidade de aprender
-              constantemente. Minha visão abrangente e comprometimento com a
-              excelência me permitem impulsionar projetos inovadores, alinhados
-              com as necessidades do mercado e com o avanço tecnológico.
-            </p>
-          </div>
-        </section>
-
-        <section id="formacao">
-          <div class="section-title-container">
-            <h2>Formação</h2>
-            <p>Formação ...</p>
-          </div>
-          <div id=""></div>
-        </section>
-
-        <section id="portfolio">
-          <div class="section-title-container">
-            <h2>Portolio</h2>
-            <p>Últimos projetos desenvolvidos.</p>
-          </div>
-          <div id="github"></div>
-        </section>
+    <header>
+      <h1 class="logo">Paulo Jalowyj</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#sobre">Sobre Mim</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#portfolio">Portólio</a></li>
+        </ul>
+      </nav>
+      <div style="width: 100%; display: flex; justify-content: end">
+        <button class="contato" onclick="goToAnchor('contato')">Contato</button>
       </div>
+    </header>
+    <main>
+      <section id="sobre">
+        <div class="section-title-container">
+          <h2>Sobre Mim</h2>
+        </div>
+        <div class="content">
+          <p>
+            Sou um profissional com experiência em liderança e inovação, atuando
+            como CTO na Siderea Academy e Coordenador de Inovação na Escola da
+            Magistratura Federal. Atualmente, estou em processo de aprimoramento
+            acadêmico e ampliação de conhecimentos ao cursar Engenharia de
+            Software na UNINTER.
+          </p>
+
+          <p>
+            Destaco minha habilidade em conciliar conhecimentos técnicos e
+            criatividade, o que me permite abordar desafios complexos de forma
+            inovadora. Minha trajetória profissional é pautada pela busca
+            contínua de excelência, contribuindo para o desenvolvimento de
+            soluções eficientes e impactantes. Além disso, tenho experiência em
+            liderar equipes e projetos de alto desempenho, focados no
+            crescimento e sucesso das organizações.
+          </p>
+
+          <p>
+            Sou movido por desafios e pela oportunidade de aprender
+            constantemente. Minha visão abrangente e comprometimento com a
+            excelência me permitem impulsionar projetos inovadores, alinhados
+            com as necessidades do mercado e com o avanço tecnológico.
+          </p>
+        </div>
+      </section>
+
+      <section id="formacao">
+        <div class="section-title-container">
+          <h2>Formação</h2>
+          <p>Formação ...</p>
+        </div>
+        <div id=""></div>
+      </section>
+
+      <section id="portfolio">
+        <div class="section-title-container">
+          <h2>Portfólio</h2>
+          <p>
+            Últimos projetos desenvolvidos. Utilizando tecnologias como NodeJS,
+            React, NextJs, Tailwind CSS entre outros.
+          </p>
+        </div>
+        <!--Recebe dados da API do github através do Javascript-->
+        <div id="github"></div>
+      </section>
+
+      <section id="contato">
+        <div class="section-title-container">
+          <h2>Contato</h2>
+          <p>
+            Últimos projetos desenvolvidos. Utilizando tecnologias como NodeJS,
+            React, NextJs, Tailwind CSS entre outros.
+          </p>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="footer-content">Footer</div>
-      <div></div>
+      <div class="footer-copyright">
+        <span
+          >Desenvolvido por Paulo Gustavo Moreira Jalowyj -
+          <span style="color: var(--lime-400)">RU 4232191</span></span
+        >
+        <span>Atividade Prática: Aplicações Web e Móveis.</span>
+      </div>
     </footer>
 
     <script>
       // Fazendo uma requisição GET para a API de repositório no GitHub
-      fetch("https://api.github.com/users/paulojalowyj/repos?per_page=5")
+      fetch("https://api.github.com/users/paulojalowyj/repos?per_page=10")
         .then((response) => response.json()) // Parse da resposta como JSON
         .then((data) => {
           // Manipulação dos dados recebidos da API
           const dataContainer = document.getElementById("github");
           data.map((item) => {
+            console.log(item);
             // Criar elementos com base nos dados da API
             const card = document.createElement("div");
+            const cardHeader = document.createElement("div");
             const id = document.createElement("p");
             const language = document.createElement("p");
+            const description = document.createElement("p");
+            const name = document.createElement("h3");
+            const link = document.createElement("a");
 
             card.className = "repository-card";
+            cardHeader.className = "repository-card-header";
 
             id.textContent = item.id;
+            name.textContent = item.name;
+            name.className = "repository-name";
+
             language.textContent = item.language;
+            language.className = "respository-language";
+
+            description.textContent = item.description;
+            description.className = "respository-description";
+
+            link.textContent = item.svn_url;
+            link.setAttribute("href", item.svn_url);
+            link.setAttribute("target", "__blank");
+            link.className = "repository-link";
 
             dataContainer.appendChild(card);
-            card.appendChild(id);
+            card.appendChild(cardHeader);
+            cardHeader.appendChild(name);
+            cardHeader.appendChild(id);
+            card.appendChild(description);
             card.appendChild(language);
+            card.appendChild(link);
           });
         })
         .catch((error) =>
