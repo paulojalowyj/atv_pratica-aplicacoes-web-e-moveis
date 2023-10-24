@@ -1,3 +1,8 @@
+/*    
+Arquivo responssável pelos estilos da página.
+*/
+
+/*Definição das variáveis padrões*/
 :root {
   --zinc-50: #fafafa;
   --zinc-100: #f4f4f5;
@@ -196,6 +201,7 @@ h2 {
   margin: 24px 0 24px 0;
 }
 
+/*Definição das media queries para responsividade*/
 @media only screen and (max-width: 600px) {
   header {
     display: flex;
@@ -204,6 +210,12 @@ h2 {
   }
 
   #github {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .academy-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -228,19 +240,19 @@ h2 {
   margin-top: 8px;
 }
 
-.form-textarea .form-control{
+.form-textarea .form-control {
   border-radius: 8px;
   height: 120px;
-  padding: 12px
+  padding: 12px;
 }
 
-.form-text .form-control{
+.form-text .form-control {
   border-radius: 8px;
-  padding: 12px
+  padding: 12px;
 }
 
 .form-required {
-  color: var(--lime-400)
+  color: var(--lime-400);
 }
 
 .submit {
