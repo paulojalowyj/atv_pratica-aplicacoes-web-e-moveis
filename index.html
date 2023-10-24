@@ -14,7 +14,7 @@
         <ul>
           <li><a href="#sobre">Sobre Mim</a></li>
           <li><a href="#formacao">Formação</a></li>
-          <li><a href="#portfolio">Portólio</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
         </ul>
       </nav>
       <div style="width: 100%; display: flex; justify-content: end">
@@ -56,10 +56,43 @@
 
       <section id="formacao">
         <div class="section-title-container">
-          <h2>Formação</h2>
-          <p>Formação ...</p>
+          <h2>Formação Acadêmica</h2>
+          <p></p>
         </div>
-        <div id=""></div>
+        <div class="academy-container">
+          <div class="academy-card">
+            <h3 class="academy-title">
+              UNINTER Centro Universitário Internacional
+            </h3>
+            <p class="academy-course">Bacharelado, Engenharia de Software</p>
+            <p class="academy-duration">ago de 2022 - ago de 2026</p>
+            <p class="academy-description">
+              Frente a uma grande tendência para automatização dos serviços o
+              profissional se torna relevante para atuar no desenvolvimento de
+              sistemas web e aplicativos, bem como conhecer os vários níveis de
+              desenvolvimento do back-end (funcionalidades do sistema) ao
+              front-end (aparência do sistema). O curso também prepara o
+              profissional para atuar no planejamento, desenvolvimento e
+              manutenção de softwares, utilizando as principais tecnologias e
+              ferramentas disponíveis na atualidade.
+            </p>
+          </div>
+
+          <div class="academy-card">
+            <h3 class="academy-title">Universidade Tuiuti do Paraná - UTP</h3>
+            <p class="academy-course">Tecnólogo, Fotografia</p>
+            <p class="academy-duration">ago de 2016 - ago de 2019</p>
+            <p class="academy-description">
+              O Curso Superior de Tecnologia em Fotografia da Universidade
+              Tuiuti do Paraná – UTP prepara profissionais para operar
+              equipamentos e utilizar técnicas de produção, obtenção e
+              processamento de imagens fotográficas, tanto analógicas quanto
+              digitais. Tudo em espaços específicos para o desenvolvimento das
+              aulas práticas, como os atelies de Cinema, Vídeo, Fotografia e
+              Manipulação digital.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section id="portfolio">
@@ -78,14 +111,71 @@
         <div class="section-title-container">
           <h2>Contato</h2>
           <p>
-            Últimos projetos desenvolvidos. Utilizando tecnologias como NodeJS,
-            React, NextJs, Tailwind CSS entre outros.
+            Fique à vontade para me contatar em caso de dúvidas ou sugestões.
           </p>
         </div>
+
+        <form>
+          <div class="form-text form-group field-name">
+            <label for="name" class="form-text-label"
+              >Nome<span class="form-required">*</span></label
+            >
+            <input
+              type="text"
+              placeholder="Insira seu nome"
+              class="form-control"
+              name="name"
+              access="false"
+              id="name"
+              required="required"
+              aria-required="true"
+            />
+          </div>
+          <div class="form-text form-group field-email">
+            <label for="email" class="form-text-label"
+              >Email<span class="form-required">*</span></label
+            >
+            <input
+              type="email"
+              placeholder="Insira seu e-mail"
+              class="form-control"
+              name="email"
+              access="false"
+              id="email"
+              required="required"
+              aria-required="true"
+            />
+          </div>
+          <div class="form-textarea form-group field-message">
+            <label for="message" class="form-textarea-label"
+              >Mensagem<span class="form-required">*</span></label
+            >
+            <textarea
+              type="textarea"
+              placeholder="Insira sua mensagem."
+              class="form-control"
+              name="message"
+              access="false"
+              id="message"
+              required="required"
+              aria-required="true"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <button
+              type="submit"
+              class="button submit"
+              name="submit"
+              access="false"
+              id="submit"
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
       </section>
     </main>
     <footer>
-      <div class="footer-content">Footer</div>
       <div class="footer-copyright">
         <span
           >Desenvolvido por Paulo Gustavo Moreira Jalowyj -

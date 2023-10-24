@@ -40,6 +40,41 @@ nav ul {
   width: 100%;
 }
 
+.academy-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.academy-card {
+  background-color: var(--zinc-900);
+  padding: 20px;
+  border-radius: 8px;
+  border: solid 1px var(--zinc-800);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.academy-title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.academy-course {
+  color: var(--zinc-400);
+}
+
+.academy-duration {
+  color: var(--zinc-400);
+}
+
+.academy-description {
+  color: var(--zinc-200);
+  line-height: 1.25rem;
+  font-size: small;
+}
+
 .nav a {
   color: var(--lime-400);
 }
@@ -55,7 +90,7 @@ header {
   grid-template-columns: 2fr 3fr 2fr;
   align-items: center;
   gap: 24px;
-  padding: 12px 20px 12px 20px;
+  padding: 20px 20px 12px 20px;
   max-width: 1440px;
   margin: auto;
 }
@@ -102,12 +137,11 @@ button {
 
 button:hover {
   opacity: 90%;
-  border: solid 1px var(--lime-500)
+  border: solid 1px var(--lime-500);
 }
 
 section {
-  margin: 40px 0;
-  padding: 12px 20px 12px 20px;
+  padding: 48px 20px 12px 20px;
   max-width: 1440px;
   margin: auto;
 }
@@ -132,9 +166,6 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 12px;
-}
-
-.repository-card-header h3 {
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -158,7 +189,7 @@ h2 {
 #github {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 12px;
 }
 
 .section-title-container {
@@ -188,4 +219,26 @@ h2 {
   flex-direction: column;
   gap: 20px;
   line-height: 1.35rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.form-textarea .form-control{
+  border-radius: 8px;
+  height: 120px;
+  padding: 12px
+}
+
+.form-text .form-control{
+  border-radius: 8px;
+  padding: 12px
+}
+
+.submit {
+  min-width: 100%;
 }
