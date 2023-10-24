@@ -239,6 +239,10 @@ h2 {
   padding: 12px
 }
 
+.form-required {
+  color: var(--lime-400)
+}
+
 .submit {
   min-width: 100%;
 }
